@@ -27,8 +27,9 @@ static void DiceRolled()
         isRealNumber = int.TryParse(userInput,out userNumber );
 
     }
-    Console.WriteLine("Press any key to roll the dice");
+    Console.Write("Press any key to roll the dice....");
     Console.ReadKey();  //waits for user to press a key to continue;
+    Console.WriteLine();
     //int diceRollOne = 6;
     //int diceRollTwo = 5;
     int diceRollOne = GenerateRandomNumber(userNumber);
@@ -75,11 +76,11 @@ static string HandleSixSidedDice(int diceOne, int diceTwo)
     switch (sum)
     {
         case 2:
-            return "Snake Eyes";
+            return "\"Snake Eyes\"";
             case 3:
-            return "Ace Deuce";
+            return "\"Ace Deuce\"";
         case 12:
-            return "Box cars";
+            return "\"Box cars\"";
         default:
             return "";
     }
@@ -106,7 +107,7 @@ static string HandleSixSideDiceTotal(int diceOne, int diceTwo)
         case 2:
             case 3:
         case 12:
-            return "Craps";
+            return "\"Craps\"";
         default:
             return ""; 
     }
